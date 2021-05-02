@@ -131,7 +131,6 @@ export default {
   very_high:'ສູງຫຼາຍ',
   doc_will_give_u_qr:'ທ່ານໝໍຈະໃຫ້ ຄິວອາໂຄດ',
   for_risk_assessment:'ສຳຫຼັບກວດສອບຄວາມສ່ຽງ',
-  risk_level:'ລະດັບຄວາມສ່ຽງ',
   receive_qr_code:'Get QR Code',
   for_using_service:'ໃນການໃຊ້ບໍລິການ',
   };

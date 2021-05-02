@@ -131,7 +131,6 @@ export default {
   very_high:'Tinggi',
   doc_will_give_u_qr:'Biarkan dokter memberikan Anda kode QR',
   for_risk_assessment:'untuk penilaian risiko',
-  risk_level:'tingkat risiko',
   receive_qr_code:'Get QR Code',
   for_using_service:'untuk/telah menggunakan layanan ini',
   };
