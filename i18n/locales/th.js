@@ -82,7 +82,6 @@ export default {
   data_at: 'ข้อมูลวันที่',
   por_sor: 'พ.ศ',
   scan_again: 'สแกนใหม่อีกครั้ง',
-  risk_level: 'ระดับความเสี่ยง',
   wrong_data: 'ข้อมูลไม่ถูกต้อง',
   record_contact_and_estimate_risk:
     'เพื่อบันทึกการเข้าใกล้และตรวจสอบความเสี่ยง',
@@ -171,7 +170,6 @@ export default {
   minute: 'นาที',
   second: 'วินาที',
   very_low_risk: 'ความเสี่ยงต่ำมาก',
-  low_risk: 'ความเสี่ยงน้อย',
   medium_risk: 'ความเสี่ยงปานกลาง',
   high_risk: 'ความเสี่ยงสูงมาก',
   wash_hand_wear_mask_avoid_crowd: 'ล้างมือ สวมหน้ากาก หลีกเลี่ยงที่แออัด',

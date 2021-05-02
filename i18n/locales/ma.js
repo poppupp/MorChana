@@ -131,7 +131,6 @@ export default {
   very_high:'မြင့်သည်',
   doc_will_give_u_qr:'ဆရာဝန်က QR Code ကိုပေးပါလိမ့်မယ်။',
   for_risk_assessment:'အန္တရာယ် အကဲဖြတ်ခြင်း',
-  risk_level:'အန္တရာယ်အဆင့်',
   receive_qr_code:'Get QR Code',
   for_using_service:'ဝန်ဆောင်မှုကိုသုံးရန်အတွက်',
   };
