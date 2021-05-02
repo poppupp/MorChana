@@ -125,7 +125,6 @@ const SelectImageButton = ({onSelectImage}) => {
           const newFilePath = `${Date.now()}-tmp`
           let tmpPath = `${RNFS.CachesDirectoryPath}/${newFilePath}`
           RNFetchBlob.fs.writeFile(tmpPath, response.data, 'base64')
-            .then(() => {})
             .finally(() => {
               const uri = 'file://' + tmpPath
               onSelectImage(uri)
