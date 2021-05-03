@@ -6,7 +6,6 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from 'react-navigation-hooks'
 import RNFS from 'react-native-fs'
 import RNFetchBlob from 'rn-fetch-blob'
-// import ImagePicker from 'react-native-image-picker';
 import { StyleSheet, View, TouchableOpacity, StatusBar, NativeModules, Platform } from 'react-native'
 import { COLORS } from '../styles'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
