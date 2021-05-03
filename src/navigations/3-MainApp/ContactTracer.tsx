@@ -58,7 +58,7 @@ export class ContactTracer extends React.Component<
     // TODO: Use the global userId instead of the local one. Remove User.tsx file if done
     const userId = nanoid().substr(0, 20)
     this.setState({ userId: userId })
-    NativeModules.ContactTracerModule.setUserId(userId).then(userId => {})
+    NativeModules.ContactTracerModule.setUserId(userId).then()
 
     // Check if Tracer Service has been enabled
     NativeModules.ContactTracerModule.isTracerServiceEnabled()
