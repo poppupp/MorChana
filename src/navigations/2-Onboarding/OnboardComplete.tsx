@@ -18,7 +18,6 @@ export const OnboardComplete = () => {
     SUB_TITLE: I18n.t('can_start_using_now'),
     NEXT_BUTTON: I18n.t('start'),
   }
-  const navigation = useNavigation()
   const resetTo = useResetTo()
   return (
     <SafeAreaView style={styles.container}>

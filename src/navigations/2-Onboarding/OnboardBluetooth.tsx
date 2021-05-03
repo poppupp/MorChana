@@ -20,7 +20,7 @@ export const OnboardBluetooth = () => {
 
   const handleSubmit = async () => {
     showSpinner()
-    await contactTracer?.enable()
+    contactTracer?.enable()
     hide()
 
     setTimeout(() => {

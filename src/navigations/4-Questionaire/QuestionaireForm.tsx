@@ -117,8 +117,8 @@ export const QuestionaireForm = ({ navigation }) => {
   const di = dataInputTable[index]
   const value = formValue[di.id]
 
-  const setValue = (value) => {
-    setFormValue({ ...formValue, [di.id]: value })
+  const setValue = (valueInput) => {
+    setFormValue({ ...formValue, [di.id]: valueInput })
   }
 
   const onBack = useCallback(() => {

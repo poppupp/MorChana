@@ -8,7 +8,6 @@ export class HookState {
   changeEventName: string
   data: any
   getData(key) {}
-  setData(key, value) {}
   constructor(name) {
     this.name = name
     this.changeEventName = 'change:' + HOOK_STATE_PREFIX + ':' + name
@@ -35,7 +34,6 @@ export const createUseHookState = <DataType>(hookStateInstance: HookState) => ()
   }, [])
   
   const setData = useCallback((key: keyof DataType, value: valueof<DataType>) => {
-    hookStateInstance.setData(key, value)
   }, [])
 
   return [data, setData]

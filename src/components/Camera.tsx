@@ -45,6 +45,17 @@ const ShutterButton = styled.TouchableOpacity`
   aspect-ratio: 1;
 `
 
+
+const getFlashModeName = (flashMode) => {
+  if (flashMode === RNCamera.Constants.FlashMode.on) {
+    return 'flash';
+  }
+
+  return flashMode === RNCamera.Constants.FlashMode.off
+  ? 'flash-off'
+  : 'flash-auto';
+}
+
 const FlashButton = ({ flashMode, setFlashMode }) => (
   <TouchableOpacity
     activeOpacity={0.8}
@@ -57,13 +68,7 @@ const FlashButton = ({ flashMode, setFlashMode }) => (
     }}
   >
     <MaterialCommunityIcons
-      name={
-        flashMode === RNCamera.Constants.FlashMode.on
-          ? 'flash'
-          : flashMode === RNCamera.Constants.FlashMode.off
-          ? 'flash-off'
-          : 'flash-auto'
-      }
+      name={getFlashModeName(flashMode)}
       color="white"
       size={36}
     />
@@ -125,7 +130,6 @@ const SelectImageButton = ({onSelectImage}) => {
           const newFilePath = `${Date.now()}-tmp`
           let tmpPath = `${RNFS.CachesDirectoryPath}/${newFilePath}`
           RNFetchBlob.fs.writeFile(tmpPath, response.data, 'base64')
-            .then(() => {})
             .finally(() => {
               const uri = 'file://' + tmpPath
               onSelectImage(uri)
