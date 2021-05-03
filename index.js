@@ -28,8 +28,7 @@ let BackgroundGeolocationHeadlessTask = async (event) => {
   let params = event.params
   console.log('[BackgroundGeolocation HeadlessTask] -', event.name, params)
 
-  switch (event.name) {
-    case 'heartbeat':
+  if (event.name == 'heartbeat') {
       // Use await for async tasks
       let location = await backgroundTracking.getLocation({
         samples: 1,
@@ -42,8 +41,6 @@ let BackgroundGeolocationHeadlessTask = async (event) => {
         '[BackgroundGeolocation HeadlessTask] - getCurrentPosition:',
         location,
       )
-      break
-  }
 }
 
 BackgroundGeolocation.registerHeadlessTask(BackgroundGeolocationHeadlessTask)
@@ -54,14 +51,7 @@ BackgroundGeolocation.registerHeadlessTask(BackgroundGeolocationHeadlessTask)
  */
 let BackgroundFetchHeadlessTask = async (event) => {
   console.log('[BackgroundFetch HeadlessTask] start')
-  // Important:  await asychronous tasks when using HeadlessJS.
-  /* DISABLED
-  let location = await BackgroundGeolocation.getCurrentPosition({persist: false, samples: 1});
-  console.log('- current position: ', location);
-  // Required:  Signal to native code that your task is complete.
-  // If you don't do this, your app could be terminated and/or assigned
-  // battery-blame for consuming too much time in background.
-  */
+
   console.log('[BackgroundFetch HeadlessTask] finished')
 
   BackgroundFetch.finish()
